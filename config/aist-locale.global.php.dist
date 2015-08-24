@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * AistLocale (http://mateuszsitek.com/projects/aist-locale)
+ *
+ * @link      http://github.com/ma-si/aist-locale for the canonical source repository
+ * @copyright Copyright (c) 2006-2015 Aist Internet Technologies (http://aist.pl) All rights reserved.
+ * @license   http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
+ */
+
+return [
+    'translator' => [
+        'locale' => 'pl_PL',
+        'check_agent' => false,
+        'plural_rule' => 'nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)',
+        'supported' => ['pl', 'pl-PL', 'en'],
+        'translation_file_patterns' => [
+            'gettext' => [
+                'type' => 'gettext',
+                'base_dir' => './data/language',
+                'pattern' => '%s.mo',
+            ],
+        ],
+    ],
+];

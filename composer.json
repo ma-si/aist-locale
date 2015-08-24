@@ -1,0 +1,43 @@
+{
+    "name": "aist/aist-locale",
+    "description": "Locale Module for ZF2 Application.",
+    "homepage": "http://mateuszsitek.com/projects/aist-locale",
+    "license": "BSD-3-Clause",
+    "type": "zf2-module",
+    "keywords": [
+        "aist",
+        "locale",
+        "translation",
+        "zf2"
+    ],
+    "authors": [
+        {
+            "name": "MaSi",
+            "email": "webdeveloper@mateuszsitek.com",
+            "homepage": "http://mateuszsitek.com",
+            "role": "Author"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "ext-intl": "*",
+        "zendframework/zend-console": ">=2.3.3",
+        "zendframework/zend-i18n": ">=2.3.3",
+        "zendframework/zend-filter": ">=2.3.3",
+        "zendframework/zend-mvc": ">=2.3.3",
+        "zendframework/zend-validator": ">=2.3.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "AistLocale\\": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AistLocaleTest\\": "test/"
+        }
+    }
+}
