@@ -5,8 +5,9 @@ A Zend Framework 2 Module.
 [![Build Status](https://travis-ci.org/ma-si/aist-locale.svg?branch=master)](https://travis-ci.org/ma-si/aist-locale)
 [![Total Downloads](https://poser.pugx.org/aist/aist-locale/downloads)](https://packagist.org/packages/aist/aist-locale)
 [![Dependency Status](https://www.versioneye.com/user/projects/55db26bc8d9c4b00180005b5/badge.svg?style=flat)](https://www.versioneye.com/user/projects/55db26bc8d9c4b00180005b5)
-[![Stories in Ready](https://badge.waffle.io/ma-si/aist-locale.svg?label=ready&title=Ready)](http://waffle.io/ma-si/aist-locale)
 [![Code Climate](https://codeclimate.com/github/ma-si/aist-locale/badges/gpa.svg)](https://codeclimate.com/github/ma-si/aist-locale)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ma-si/aist-locale/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ma-si/aist-locale/?branch=master)
+[![Stories in Ready](https://badge.waffle.io/ma-si/aist-locale.svg?label=ready&title=Ready)](http://waffle.io/ma-si/aist-locale)
 [![License](https://poser.pugx.org/aist/aist-locale/license)](https://packagist.org/packages/aist/aist-locale)
 
 
