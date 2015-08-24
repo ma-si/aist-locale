@@ -2,6 +2,10 @@ AistLocale
 ==========
 A Zend Framework 2 Module.
 
+[![Build Status](https://travis-ci.org/ma-si/aist-locale.svg?branch=master)](https://travis-ci.org/ma-si/aist-locale)
+[![Stories in Ready](https://badge.waffle.io/ma-si/aist-locale.svg?label=ready&title=Ready)](http://waffle.io/ma-si/aist-locale)
+[![Code Climate](https://codeclimate.com/github/ma-si/aist-locale/badges/gpa.svg)](https://codeclimate.com/github/ma-si/aist-locale)
+
 
 ## Installation
 Installation of this module uses composer.
