@@ -41,4 +41,22 @@ class ModuleTest extends PHPUnit_Framework_TestCase
         $this->assertSame($expectedServiceManagerConfig, $config['service_manager']);
         $this->assertSame($config, unserialize(serialize($config)));
     }
+
+    public function testGetAutoloaderConfig()
+    {
+        $config = $this->module->getAutoloaderConfig();
+
+        $expectedAutoloaderConfig = [
+            'Zend\Loader\ClassMapAutoloader' => [
+                realpath(__DIR__ . '/../..') . '/autoload_classmap.php',
+            ],
+            'Zend\Loader\StandardAutoloader' => [
+                'namespaces' => [
+                    'AistLocale' => realpath(__DIR__ . '/../..') . '/src/' . 'AistLocale',
+                ],
+            ],
+        ];
+
+        $this->assertSame($expectedAutoloaderConfig, $config);
+    }
 }
