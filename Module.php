@@ -14,6 +14,7 @@ use Locale;
 use Zend\Mvc\MvcEvent;
 use Zend\Console\Request as ConsoleRequest;
 use Zend\Mvc\I18n\Translator;
+use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\Validator\AbstractValidator;
 use Zend\Filter\Word\DashToUnderscore;
 
@@ -66,12 +67,23 @@ class Module
         $translator->setFallbackLocale($default_locale);
 
         // Set plural view helper
-        $viewHelperManager = $serviceManager->get('ViewHelperManager');
-        $pluralHelper = $viewHelperManager->get('Plural');
-        $pluralHelper->setPluralRule($plural_rule);
+        $this->setPluralViewHelper($serviceManager, $plural_rule);
 
         // Set default translator for validator messages
         AbstractValidator::setDefaultTranslator(new Translator($translator));
+    }
+
+    /**
+     * Set plural view helper
+     *
+     * @param $serviceManager
+     * @param $pluralRule
+     */
+    private function setPluralViewHelper(ServiceLocatorInterface $serviceManager, $pluralRule)
+    {
+        $viewHelperManager = $serviceManager->get('ViewHelperManager');
+        $pluralHelper = $viewHelperManager->get('Plural');
+        $pluralHelper->setPluralRule($pluralRule);
     }
 
     /**

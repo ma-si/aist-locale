@@ -12,6 +12,9 @@ namespace AistLocaleTest;
 
 use AistLocale\Module;
 use PHPUnit_Framework_TestCase;
+use Zend\I18n\View\Helper\Plural;
+use Zend\Mvc\Service\ViewHelperManagerFactory;
+use Zend\ServiceManager\ServiceLocatorInterface;
 
 class ModuleTest extends PHPUnit_Framework_TestCase
 {
@@ -40,6 +43,27 @@ class ModuleTest extends PHPUnit_Framework_TestCase
         $this->assertArrayHasKey('service_manager', $config);
         $this->assertSame($expectedServiceManagerConfig, $config['service_manager']);
         $this->assertSame($config, unserialize(serialize($config)));
+    }
+
+    public function testSetPluralViewHelper()
+    {
+        $serviceManager = $this->getMock(ServiceLocatorInterface::class);
+        $viewHelperManager = $this->getMock(ViewHelperManagerFactory::class);
+        $pluralHelper = $this->getMockBuilder(Plural::class)->getMock();
+
+        $serviceManager
+            ->expects(self::once())
+            ->method('get')
+            ->with('ViewHelperManager')
+            ->willReturn($viewHelperManager)
+        ;
+
+        $viewHelperManager
+            ->expects(self::once())
+            ->method('get')
+            ->with('Plural')
+            ->willReturn($pluralHelper)
+        ;
     }
 
     public function testGetAutoloaderConfig()

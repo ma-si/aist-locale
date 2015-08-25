@@ -1,4 +1,4 @@
-AistLocale
+AistLocale [![SensioLabsInsight](https://insight.sensiolabs.com/projects/37fc6923-6483-4fa0-af31-f9e09846fcf6/small.png)](https://insight.sensiolabs.com/projects/37fc6923-6483-4fa0-af31-f9e09846fcf6)
 ==========
 A Zend Framework 2 Module.
 
@@ -24,7 +24,7 @@ For composer documentation, please refer to [getcomposer.org](http://getcomposer
 3. Copy `aist-locale.global.php.dist` to `./config/autoload/aist-locale.global.php`
 
 ## Configuration
-This module provides additional formatters extending faker. Here is a list of the bundled formatters.
+This module provides additional configuration extending I18n. Here is a list of the config keys.
 
 * `locale` - Default language.
 * `plural_rule` - Plural rules.
